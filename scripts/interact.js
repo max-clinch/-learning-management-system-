@@ -455,7 +455,7 @@ const txObject = contractInstance.methods.createNewModule(
   'https://polygon-mumbai.g.alchemy.com/v2/ermBo3YbBnlXNzo8rIgTaPHFpHsA6-SD',
   '48 hours'
 );
-const privateKey = "6e5b2a79d875f48a5c61b8683dbe94c349356e4a58809fde3890b265b81c7972"
+const privateKey =  process.env.PRIVATE_KEY;
 
 const txData = txObject.encodeABI();
 
