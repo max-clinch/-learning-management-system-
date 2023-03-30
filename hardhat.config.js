@@ -1,29 +1,24 @@
+//require("@nomicfoundation/hardhat-toolbox");
+require('dotenv').config();
+require("@nomiclabs/hardhat-waffle");
+// Any file that has require('dotenv').config() statement 
+// will automatically load any variables in the root's .env file.
 module.exports = {
-  defaultNetwork: "goerli",
-  networks: {
-    hardhat: {
-    },
-    goerli: {
-      url: "https://eth-goerli.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
-      
-    }
-  },
   solidity: {
-    version: "0.8.12",
+    version: '0.8.17',
     settings: {
       optimizer: {
         enabled: true,
-        runs: 200
-      }
-    }
+        runs: 200,
+      },
+    },
   },
-  paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
+    networks: {
+     mumbai: {
+      url: `https://polygon-mumbai.g.alchemy.com/v2/ermBo3YbBnlXNzo8rIgTaPHFpHsA6-SD`,
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      gas: 2100000,
+      gasPrice: 8000000000, // 8 gwei
+    },
   },
-  mocha: {
-    timeout: 40000
-  }
-}
+};

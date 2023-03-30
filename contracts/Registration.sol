@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.12;
+pragma solidity ^0.8.17;
 import "./Managed.sol";
 
 /**
@@ -118,7 +118,7 @@ contract Registration is Managed {
             hash: msg.sender
         });
         students.push(newStudent);
-        studentCount = newStudent.id;
+        //studentCount = newStudent.id;
 
         emit studentRegistered(newStudent.hash);
     }

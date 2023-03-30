@@ -9,6 +9,9 @@
     "@typechain/hardhat": "^6.1.5",
     "@types/mocha": "^10.0.1",
     "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
     "hardhat": "^2.13.0",
     "hardhat-gas-reporter": "^1.0.9",
     "solidity-coverage": "^0.8.2",
@@ -23,8 +26,13 @@
   },
   "dependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
     "@openzeppelin/contracts": "^4.8.2",
-    "ethers": "^6.1.0"
+    "alchemy-sdk": "^2.6.2",
+    "ethereumjs-tx": "^2.1.2",
+    "ethereumtx": "^2.0.3",
+    "web3": "^1.9.0",
+    "web3-core-helpers": "^1.9.0"
   },
   "scripts": {
     "test": "mocha"
